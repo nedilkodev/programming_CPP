@@ -8,16 +8,16 @@ protected:
     std::string name;
     int age;
     bool isSleeping;
-    std::string typeName; // Помогает избежать дублирования в eat() и sleep() [DRY]
+    std::string typeName; 
 
 public:
     Animal(std::string n, int a, std::string type = "animal");
-    virtual ~Animal() = default; // Виртуальный деструктор обязателен при полиморфизме
+    virtual ~Animal() = default; 
 
     virtual void makeSound() const;
     virtual void eat() const;
     virtual void sleep();
-    virtual void wakeUp(); // [KISS] Простое решение проблемы "вечного сна"
+    virtual void wakeUp(); 
 };
 
 class Mammal : public Animal
@@ -27,7 +27,7 @@ public:
     void makeSound() const override;
 };
 
-// [SRP] Класс хвоста отвечает только за виляние хвостом
+
 class Tail
 {
 public:
@@ -38,7 +38,7 @@ public:
 class Dog : public Mammal
 {
 private:
-    Tail tail; // Композиция: Собака "имеет" хвост
+    Tail tail; 
 
 public:
     Dog(std::string n, int a);
