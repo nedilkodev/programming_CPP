@@ -1,0 +1,6 @@
+Germany	Berlin	357022	4223.1
+France	Paris	551695	2778.1
+Poland	Warsaw	312696	679.4
+Ukraine	Kyiv	603628	200.1
+Country with the largest area: Germany
+Total area of ​​all countries: 1.82504e+06
